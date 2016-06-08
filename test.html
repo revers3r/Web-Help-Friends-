@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type=text/javascript>
+			function sleep(val) {
+				var time = new Date();
+				var stop = time.getTime() + val;
+				while(true) {
+					time = new Date();
+					if (time.getTime() > stop) return;
+				}
+			}
+			var date = new Date();
+			console.log("First time : " + date.getTime());
+			sleep(3000);
+			date2 = new Date();
+			console.log("Second time : " + date2.getTime());
+			console.log("Time Substitution : " + (date2.getTime() - date.getTime()));
+		</script>
+	</head>
+</html>
